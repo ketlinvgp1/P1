@@ -1,25 +1,66 @@
-.cabecalho{
+.cabecalho {
 
 }
 
-.navegacao{
+.navegacao {
 
 }
 
-.pesquisa{
+.pesquisa {
 
 }
 
-#campo{
+#campo {
 
 }
 
-.botao{
-background-color: aqua;
+.botao {
+    background-color: aqua;
+}
+
+.menu {
+
 }
 
 
-.menu{
+/* VITRINE */
 
+.vitrine {
+    row-gap: 20px;
 }
 
+
+/* CARD */
+
+.anuncio {
+    height: 100%;
+}
+
+
+/* IMAGENS */
+
+.imagem-anuncio {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+/* DETALHES */
+
+.detalhes {
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.detalhes:hover {
+    text-decoration: underline;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    margin-top: 30px;
+}

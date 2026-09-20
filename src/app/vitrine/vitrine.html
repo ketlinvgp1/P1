@@ -1,27 +1,104 @@
-<div class="alert alert-warning" *ngIf="lista.length<=0"><strong>Vazio!</strong> 
-    não existem produtos na vitrine!</div>
-
-<div class="row">
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2" *ngFor="let obj of lista">
-        <img class="card-img-top" src="{{obj.codigo}}.jpg"  style="width:100%">
-        <div class="card-body">
-            <h4 class="card-title">{{obj.nome}}</h4>
-            <p class="card-text" *ngIf="obj.promo>0">
-                 de: <s>R$ {{obj.valor}}</s><br>
-                 por: R$ {{obj.promo}}
-            </p>
-             <p class="card-text" *ngIf="obj.promo<=0">
-                 por: R$ {{obj.valor}}
-            </p>
-            <a href="#" class="btn btn-primary">ver mais</a> 
-            <a href="#" class="btn btn-success" *ngIf="obj.quantidade>0">comprar</a>
-        </div>
-    </div>
-
-   
-  
+<div class="alert alert-warning" *ngIf="lista.length <= 0">
+    <strong>Vazio!</strong>
+    não existem produtos na vitrine!
 </div>
 
-<footer class="rodape"> 
+<div class="row vitrine">
+    <div 
+        class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
+        *ngFor="let obj of lista">
+
+        <div class="card anuncio">
+
+            <!-- CARROSSEL -->
+            <div 
+                id="carousel{{obj.codigo}}" 
+                class="carousel slide"
+                data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <!-- Primeira imagem -->
+                    <div class="carousel-item active">
+                        <img 
+                            src="{{obj.codigo}}.jpg"
+                            class="d-block imagem-anuncio"
+                            alt="{{obj.nome}}">
+                    </div>
+
+                    <!-- Segunda imagem -->
+                    <div class="carousel-item">
+                        <img 
+                            src="{{obj.codigo}}-2.jpg"
+                            class="d-block imagem-anuncio"
+                            alt="{{obj.nome}}">
+                    </div>
+
+                    <!-- Terceira imagem -->
+                    <div class="carousel-item">
+                        <img 
+                            src="{{obj.codigo}}-3.jpg"
+                            class="d-block imagem-anuncio"
+                            alt="{{obj.nome}}">
+                    </div>
+
+                </div>
+
+                <!-- Botão anterior -->
+                <button 
+                    class="carousel-control-prev"
+                    type="button"
+                    [attr.data-bs-target]="'#carousel' + obj.codigo"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <!-- Botão próximo -->
+                <button 
+                    class="carousel-control-next"
+                    type="button"
+                    [attr.data-bs-target]="'#carousel' + obj.codigo"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+            <!-- INFORMAÇÕES DO PRODUTO -->
+            <div class="card-body">
+
+                <h4 class="card-title">
+                    {{obj.nome}}
+                </h4>
+
+                <p class="card-text" *ngIf="obj.promo > 0">
+                    de: <s>R$ {{obj.valor}}</s><br>
+                    por: R$ {{obj.promo}}
+                </p>
+
+                <p class="card-text" *ngIf="obj.promo <= 0">
+                    por: R$ {{obj.valor}}
+                </p>
+
+                <a href="#" class="detalhes">
+                    Detalhes
+                </a>
+
+                <a 
+                    href="#" 
+                    class="btn btn-success"
+                    *ngIf="obj.quantidade > 0">
+                    comprar
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class="rodape">
     <p>Pacote de viagens</p>
 </footer>
