@@ -16,6 +16,7 @@
 
 .botao {
     background-color: aqua;
+
 }
 
 .menu {
@@ -49,13 +50,20 @@
 /* DETALHES */
 
 .detalhes {
+    display: block;
+    color: #020202;
+    text-decoration: underline;
     cursor: pointer;
-    text-decoration: none;
-    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .detalhes:hover {
     text-decoration: underline;
+}
+
+.botao-comprar {
+    display: block;
+    width: 100%;
 }
 
 
