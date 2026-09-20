@@ -1,1 +1,86 @@
-<p>esqueci works!</p>
+<div class="senha-container d-flex justify-content-center align-items-center">
+
+    <div class="card senha-card shadow-lg border-0 rounded-4">
+
+        <div class="card-body p-4 p-md-5">
+
+            <h2 class="text-center mb-2">
+                Alterar senha
+            </h2>
+
+            <p class="subtitulo text-center mb-4">
+                Informe sua nova senha
+            </p>
+
+            <form class="was-validated">
+
+                <!-- Nova senha -->
+                <div class="mb-3">
+
+                    <label for="novaSenha" class="form-label">
+                        Nova senha
+                    </label>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="novaSenha"
+                        placeholder="Digite sua nova senha"
+                        required
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}">
+
+                    <div class="invalid-feedback">
+                        A senha deve ter pelo menos 8 caracteres, uma letra
+                        maiúscula, uma minúscula, um número e um caractere especial.
+                    </div>
+
+                </div>
+
+
+                <!-- Confirmar senha -->
+                <div class="mb-4">
+
+                    <label for="confirmarSenha" class="form-label">
+                        Confirmar nova senha
+                    </label>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="confirmarSenha"
+                        placeholder="Digite novamente sua senha"
+                        required>
+
+                    <div class="invalid-feedback">
+                        Confirme sua nova senha.
+                    </div>
+
+                </div>
+
+
+                <!-- Botão -->
+                <button
+                    type="submit"
+                    class="btn btn-alterar w-100">
+                    Alterar senha
+                </button>
+
+            </form>
+
+
+            <!-- Voltar -->
+            <div class="text-center mt-4">
+
+                <a routerLink="/login" class="voltar-login">
+                    Voltar para o login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+

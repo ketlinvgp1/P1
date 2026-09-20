@@ -1,34 +1,146 @@
-<form class="was-validated">
-    <h1>Nome</h1>
-    <input 
-    type="name" 
-    placeholder="Digite seu nome"
-    class="form-control" required>
-    
-    <h1>E-mail</h1>
-    <input 
-    type="email" 
-    placeholder="Digite seu e-mail"
-    class="form-control" required>
-    
-    <h1>Senha</h1>
-    <input 
-    type="password"
-    class="form-control" required>
-    <h1>Confirmação</h1>
-    <input 
-    type="password">
-    
-    <h1>CPF</h1>
-    <input 
-    type="text" 
-    placeholder="Digite seu CPF"
-    class="form-control" required>
+<div class="cadastro-container d-flex justify-content-center align-items-center">
 
-    <h1>Número de telefone</h1>
-    <input 
-    type="text"
-     placeholder="Digite seu telefone "
-     class="form-control" required>
-</form>
+    <div class="card cadastro-card shadow-lg border-0 rounded-4">
+
+        <div class="card-body p-4 p-md-5">
+
+            <h3 class="text-center mb-2">Cadastro</h3>
+
+            <p class="subtitulo text-center mb-4">
+                Crie sua conta para continuar
+            </p>
+
+            <form class="was-validated">
+
+                <!-- Nome -->
+                <div class="mb-3">
+                    <label for="txtNome" class="form-label">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="txtNome"
+                        placeholder="Informe o seu nome"
+                        required>
+
+                    <div class="invalid-feedback">
+                        Preencha esse campo!
+                    </div>
+                </div>
+
+
+                <!-- E-mail -->
+                <div class="mb-3">
+                    <label for="txtEmail" class="form-label">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="txtEmail"
+                        placeholder="Informe o seu e-mail"
+                        required>
+
+                    <div class="invalid-feedback">
+                        Informe um e-mail válido!
+                    </div>
+                </div>
+
+
+                <!-- Telefone -->
+                <div class="mb-3">
+                    <label for="txtTelefone" class="form-label">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="txtTelefone"
+                        placeholder="Ex: 99999-9999"
+                        required
+                        pattern="[0-9]{4,5}-[0-9]{4}">
+
+                    <div class="invalid-feedback">
+                        Informe um telefone válido!
+                    </div>
+                </div>
+
+
+                <!-- Documento -->
+                <div class="mb-3">
+                    <label for="txtDocumento" class="form-label">
+                        Documento
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="txtDocumento"
+                        placeholder="Informe o seu documento"
+                        required>
+
+                    <div class="invalid-feedback">
+                        Preencha esse campo!
+                    </div>
+                </div>
+
+
+                <!-- Senha -->
+                <div class="mb-3">
+                    <label for="txtSenha" class="form-label">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="txtSenha"
+                        placeholder="Informe a sua senha"
+                        required
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}">
+
+                    <div class="invalid-feedback">
+                        A senha deve conter pelo menos 8 caracteres,
+                        uma letra maiúscula, uma minúscula,
+                        um número e um caractere especial.
+                    </div>
+                </div>
+
+
+                <!-- Endereço -->
+                <div class="mb-4">
+                    <label for="txtLogradouro" class="form-label">
+                        Endereço
+                    </label>
+
+                    <textarea
+                        class="form-control"
+                        id="txtLogradouro"
+                        placeholder="Informe o seu endereço completo"
+                        required
+                        rows="3"></textarea>
+
+                    <div class="invalid-feedback">
+                        Informe seu endereço completo!
+                    </div>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-cadastrar w-100">
+                    Cadastrar
+                </button>
+
+            </form>
+
+            </div>
+
+        </div>
+
+    </div>
 

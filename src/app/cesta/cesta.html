@@ -1,1 +1,46 @@
-<p>cesta works!</p>
+<div class="container">
+
+    <h2>Minha cesta</h2>
+
+    <div *ngIf="produtos.length === 0">
+        Sua cesta está vazia.
+    </div>
+
+    <div
+        *ngFor="let produto of produtos"
+        class="card mb-3">
+
+        <div class="card-body">
+
+            <h4>{{ produto.nome }}</h4>
+
+            <p>{{ produto.descritivo }}</p>
+
+            <p>
+                Quantidade: {{ produto.qtdCesta }}
+            </p>
+
+            <p>
+                Valor unitário:
+                R$ {{ produto.precoUnitario | number:'1.2-2' }}
+            </p>
+
+            <strong>
+                Total:
+                R$ {{ produto.valorTotal | number:'1.2-2' }}
+            </strong>
+            <button
+                    class="btn btn-danger ms-3"
+                    (click)="remover(produto.codigo)">
+                    Remover
+            </button>
+
+        </div>
+
+    </div>
+
+                <h3 *ngIf="produtos.length > 0">
+                    Total da cesta:
+                    R$ {{ total() | number:'1.2-2' }}
+                </h3>
+</div>

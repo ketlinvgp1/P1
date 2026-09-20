@@ -1,0 +1,125 @@
+.cadastro-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #023b86,
+        #2a7e7a
+    );
+}
+
+
+/* CARD */
+
+.cadastro-card {
+    width: 100%;
+    max-width: 500px;
+
+    background-color: white;
+
+    border-top: 6px solid #369cdd !important;
+}
+
+
+/* TÍTULO */
+
+.cadastro-card h3 {
+    color: #023b86;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* SUBTÍTULO */
+
+.subtitulo {
+    color: #2a7e7a;
+}
+
+
+/* LABELS */
+
+.form-label {
+    color: #023b86;
+
+    font-weight: 600;
+}
+
+
+/* CAMPOS */
+
+.form-control {
+    min-height: 48px;
+
+    border: 1px solid #369cdd;
+
+    border-radius: 8px;
+}
+
+
+.form-control:focus {
+    border-color: #2a7e7a;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(42, 126, 122, 0.20);
+}
+
+
+/* TEXTAREA */
+
+textarea.form-control {
+    min-height: 90px;
+}
+
+
+/* BOTÃO */
+
+.btn-cadastrar {
+    min-height: 50px;
+
+    background-color: #023b86;
+
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-cadastrar:hover {
+    background-color: #369cdd;
+
+    color: white;
+}
+
+
+/* LINK LOGIN */
+
+.texto-conta {
+    color: #2a7e7a;
+}
+
+
+.link-login {
+    color: #12532f;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    margin-left: 4px;
+}
+
+
+.link-login:hover {
+    color: #789a37;
+
+    text-decoration: underline;
+}
