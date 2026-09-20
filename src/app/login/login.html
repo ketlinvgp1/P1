@@ -1,32 +1,75 @@
+<div class="login-container d-flex justify-content-center align-items-center">
 
- <div>
-    <p>Entre com a sua conta</p>
-    <div> 
-        <h1>E-mail ou CPF</h1>
-        <input 
-        type="text" 
-        class="form-control" 
-        id="email">
-        <h1>Senha</h1>
-        <input
-         type="password"
-         id="password"
-         class="form-control"
-        >
-        <button routerLink="/cesta" >Entrar</button>
-        <div>
-            <h1>Ainda não tem cadastro</h1>
-            <button routerLink="/cadastro" class="btn btn-primary botao" >
-                Cadastrar
-            </button>
-            </div>        
-    </div>
-    <div>
-        <label routerLink="/esqueci">Esqueceu a senha?</label>
+    <div class="card login-card shadow-lg border-0 rounded-4">
+
+        <div class="card-body p-4 p-md-5">
+
+            <h2 class="titulo-login text-center mb-4">
+                Entre com a sua conta
+            </h2>
+
+            <div>
+
+                <label class="titulo-login text-center mb-4">
+                    E-mail ou CPF
+                </label>
+
+                <input 
+                    type="text"
+                    class="form-control form-control-lg mb-3"
+                    id="email"
+                    placeholder="Digite seu e-mail ou CPF">
+
+
+                <label for="password" >
+                    Senha
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    class="form-control form-control-lg"
+                    placeholder="Digite sua senha">
+
+
+                <button 
+                    routerLink="/cesta"
+                    class="btn btn-primary btn-lg w-100 mt-4">
+                    Entrar
+                </button>
+
+
+                <div class="text-center mt-4">
+
+                    <p class="text-secondary mb-2">
+                        Ainda não tem cadastro?
+                    </p>
+
+                    <button 
+                        routerLink="/cadastro"
+                        class="btn btn-outline-primary w-100">
+                        Cadastrar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-center mt-3">
+
+                <a
+                    routerLink="/esqueci"
+                    class="esqueci-senha">
+                    Esqueceu a senha?
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
- </div> 
- 
-<footer class="rodape"> 
-    <p>Pacote de viagens</p>
-</footer>
+</div>
+
+

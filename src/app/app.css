@@ -1,0 +1,150 @@
+.cabecalho {
+    background-color: #369cdd;
+    padding: 12px 0 0;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Parte principal da header */
+.header-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* Logo + nome */
+.marca {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+#logotipo {
+    width: 70px;
+    height: auto;
+}
+
+.marca span {
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* Barra de pesquisa */
+.busca {
+    display: flex;
+
+    width: 100%;
+    max-width: 450px;
+}
+
+.busca input {
+    border-radius: 8px 0 0 8px;
+
+    border: none;
+}
+
+.btn-busca {
+    background-color: #023b86;
+    color: white;
+
+    border: none;
+
+    padding: 0 18px;
+
+    border-radius: 0 8px 8px 0;
+
+    cursor: pointer;
+}
+
+.btn-busca:hover {
+    background-color: #2a7e7a;
+}
+
+
+/* Cadastro / Cesta / Entrar */
+.menu-usuario {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.menu-usuario a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.menu-usuario a:hover {
+    color: #023b86;
+}
+
+
+/* Menu abaixo da header */
+.menu-inferior {
+    display: flex;
+    justify-content: center;
+
+    gap: 40px;
+
+    margin-top: 12px;
+    padding: 10px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.menu-inferior a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+.menu-inferior a:hover {
+    color: #023b86;
+}
+
+
+/* Celular */
+@media (max-width: 768px) {
+
+    .header-principal {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .busca {
+        max-width: 100%;
+    }
+
+    .menu-inferior {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+.rodape {
+    background-color: #023b86;
+    color: white;
+}
+
+.rodape h5 {
+    font-weight: bold;
+}
+
+.rodape p {
+    font-size: 14px;
+}

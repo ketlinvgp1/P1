@@ -1,0 +1,119 @@
+.senha-container {
+    min-height: 85vh;
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #023b86,
+        #2a7e7a
+    );
+}
+
+
+/* Card */
+
+.senha-card {
+    width: 100%;
+    max-width: 430px;
+
+    background-color: white;
+
+    border-top: 6px solid #369cdd !important;
+}
+
+
+/* Título */
+
+.senha-card h2 {
+    color: #023b86;
+
+    font-weight: 700;
+}
+
+
+/* Subtítulo */
+
+.subtitulo {
+    color: #2a7e7a;
+}
+
+
+/* Nome dos campos */
+
+.form-label {
+    color: #023b86;
+
+    font-weight: 600;
+}
+
+
+/* Campos */
+
+.form-control {
+    min-height: 48px;
+
+    border: 1px solid #369cdd;
+
+    border-radius: 8px;
+}
+
+
+/* Campo selecionado */
+
+.form-control:focus {
+    border-color: #2a7e7a;
+
+    box-shadow: 0 0 0 0.2rem rgba(42, 126, 122, 0.20);
+}
+
+
+/* Botão */
+
+.btn-alterar {
+    min-height: 50px;
+
+    background-color: #023b86;
+
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-alterar:hover {
+    background-color: #369cdd;
+
+    color: white;
+}
+
+
+/* Voltar para login */
+
+.voltar-login {
+    color: #12532f;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.voltar-login:hover {
+    color: #789a37;
+
+    text-decoration: underline;
+}
+
+
+/* Rodapé */
+
+.rodape {
+    background-color: #023b86;
+
+    color: white;
+}

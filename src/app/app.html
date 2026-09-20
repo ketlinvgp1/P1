@@ -1,17 +1,86 @@
-<header>
-  <img src="logotipo.png" id="logotipo">
-  <!--barra busca-->
-  <nav>
-    <div class="">
-      <a href="cadastro" class="">Cadastro</a> 
-      <a href="cesta" class="">Cesta</a> 
-      <a href="login" class="">Entrar</a>
-      </div>
-  </nav>
+<header class="cabecalho">
+
+    <div class="container">
+
+        <div class="header-principal">
+
+            <!-- Logo e nome -->
+            <div class="marca">
+                <img 
+                    src="logotipo.png"
+                    id="logotipo"
+                    alt="Caminhos do Brasil">
+
+                <span>Caminhos do Brasil</span>
+            </div>
+
+
+            <!-- Barra de pesquisa -->
+            <div class="busca">
+
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Buscar destinos...">
+
+                <button class="btn-busca">
+                    Buscar
+                </button>
+
+            </div>
+
+
+            <!-- Links -->
+            <nav class="menu-usuario">
+
+                <a routerLink="/cadastro">
+                    Cadastro
+                </a>
+
+                <a routerLink="/cesta">
+                    Cesta
+                </a>
+
+                <a routerLink="/login">
+                    Entrar
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Menu inferior -->
+        <div class="menu-inferior">
+
+            <a routerLink="/">Início</a>
+
+            <a href="#">Destinos</a>
+
+            <a href="#">Promoções</a>
+
+            <a href="#">Sobre nós</a>
+
+        </div>
+
+    </div>
+
 </header>
 <div>
   <router-outlet />
 </div>
-<footer>
-    Rodape
+<footer class="rodape text-center py-3">
+
+    <h5>Caminhos do Brasil</h5>
+
+    <p class="mb-1">Entre em contato: saccaminhos@gmail.com</p>
+
+    <p class="mb-1">Telefone: (11) 93455-1288</p>
+
+    <p class="mb-1">Instagram: @caminhosdoBrasil</p>
+
+    <p class="mt-3 mb-0">
+        © 2026 Caminhos do Brasil
+    </p>
+
 </footer>

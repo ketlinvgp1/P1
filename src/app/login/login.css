@@ -1,0 +1,86 @@
+/* Fundo da tela */
+.login-container {
+    min-height: 85vh;
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #023b86,
+        #2a7e7a
+    );
+}
+
+/* Card de login */
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    background-color: white;
+}
+
+/* Título */
+.login-card h2 {
+    color: #023b86 ;
+    font-weight: bold;
+}
+
+/* Labels */
+.login-card label {
+    color: #023b86 ;
+    font-weight: 500;
+}
+
+/* Campos */
+.form-control {
+    background-color: #f5f5f5;
+    border: 1px solid #d6d6d6;
+}
+
+.form-control:focus {
+    background-color: white;
+
+    border-color: #369cdd;
+
+    box-shadow: 0 0 0 0.2rem rgba(54, 156, 221, 0.25);
+}
+
+/* Botão Entrar */
+.btn-primary {
+    background-color: #023b86;
+    border-color: #023b86;
+}
+
+.btn-primary:hover {
+    background-color: #369cdd;
+    border-color: #369cdd;
+}
+
+/* Botão Cadastrar */
+.btn-outline-primary {
+    color: #2a7e7a;
+    border-color: #2a7e7a;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2a7e7a;
+    border-color: #2a7e7a;
+    color: white;
+}
+
+/* Esqueceu a senha */
+.esqueci-senha {
+    color: #369cdd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.esqueci-senha:hover {
+    color: #023b86;
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.rodape {
+    background-color:#2a7e7a;
+    color: white;
+}

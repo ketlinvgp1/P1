@@ -1,27 +1,129 @@
-<div class="alert alert-warning" *ngIf="lista.length<=0"><strong>Vazio!</strong> 
-    não existem produtos na vitrine!</div>
+<!-- Mensagem caso não existam produtos -->
+<div
+    class="alert alert-warning text-center"
+    *ngIf="lista.length <= 0">
 
-<div class="row">
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2" *ngFor="let obj of lista">
-        <img class="card-img-top" src="{{obj.codigo}}.jpg"  style="width:100%">
-        <div class="card-body">
-            <h4 class="card-title">{{obj.nome}}</h4>
-            <p class="card-text" *ngIf="obj.promo>0">
-                 de: <s>R$ {{obj.valor}}</s><br>
-                 por: R$ {{obj.promo}}
-            </p>
-             <p class="card-text" *ngIf="obj.promo<=0">
-                 por: R$ {{obj.valor}}
-            </p>
-            <a href="#" class="btn btn-primary">ver mais</a> 
-            <a href="#" class="btn btn-success" *ngIf="obj.quantidade>0">comprar</a>
-        </div>
-    </div>
+    <strong>Vazio!</strong>
+    Não existem pacotes disponíveis!
 
-   
-  
 </div>
 
-<footer class="rodape"> 
-    <p>Pacote de viagens</p>
-</footer>
+
+<!-- Vitrine -->
+<div class="container my-4">
+
+    <h2 class="text-center mb-4">
+        Conheça nossos destinos
+    </h2>
+
+
+    <div class="row g-4">
+
+        <!-- Produto -->
+        <div
+            class="col-12 col-sm-6 col-md-4 col-lg-3"
+            *ngFor="let obj of lista">
+
+            <div class="card h-100 shadow-sm">
+
+                <!-- Imagem -->
+                <img
+                    class="card-img-top"
+                    src="{{obj.codigo}}.jpg"
+                    alt="{{obj.nome}}">
+
+
+                <div class="card-body d-flex flex-column">
+
+                    <!-- Destino -->
+                    <h5 class="card-title">
+                        {{ obj.nome }}
+                    </h5>
+
+
+                    <!-- Descrição -->
+                    <p class="card-text">
+                        {{ obj.descritivo }}
+                    </p>
+
+
+                    <!-- Produto em promoção -->
+                    <div *ngIf="obj.promo > 0">
+
+                        <small class="text-muted">
+                            De:
+                            <s>
+                                R$ {{ obj.valor | number:'1.2-2' }}
+                            </s>
+                        </small>
+
+                        <h5 class="preco">
+                            R$ {{ obj.promo | number:'1.2-2' }}
+                        </h5>
+
+                    </div>
+
+
+                    <!-- Produto sem promoção -->
+                    <div *ngIf="obj.promo <= 0">
+
+                        <h5 class="preco">
+                            R$ {{ obj.valor | number:'1.2-2' }}
+                        </h5>
+
+                    </div>
+
+
+                    <!-- Quantidade disponível -->
+                    <p
+                        class="text-muted"
+                        *ngIf="obj.quantidade > 0">
+
+                        {{ obj.quantidade }} pacotes disponíveis
+
+                    </p>
+
+
+                    <!-- Botões -->
+                    <div class="mt-auto">
+
+                        <a
+                            routerLink="/detalhe"
+                            class="btn btn-outline-primary w-100 mb-2">
+
+                            Ver mais
+
+                        </a>
+
+
+                            <button
+                                *ngIf="obj.quantidade > 0"
+                                class="btn btn-success w-100"
+                                (click)="comprar(obj)">
+
+                                Comprar
+
+                            </button>
+
+
+                        <!-- Produto indisponível -->
+                        <button
+                            *ngIf="obj.quantidade <= 0"
+                            class="btn btn-secondary w-100"
+                            disabled>
+
+                            Indisponível
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
