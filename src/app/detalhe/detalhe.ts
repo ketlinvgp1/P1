@@ -42,21 +42,32 @@ export class Detalhe {
 
 
   // Define o preço de acordo com o local de partida
-  alterarPartida(event: any) {
+alterarPartida(event: any) {
 
-    if (event.target.value == "sao-paulo") {
+  // Pega o preço do produto selecionado na vitrine
+  let preco = this.obj.promo > 0
+    ? this.obj.promo
+    : this.obj.valor;
 
-      this.valorPartida = 500;
 
-    }
+  // Se escolher São Paulo, mantém o preço original
+  if (event.target.value == "sao-paulo") {
 
-    if (event.target.value == "rio-de-janeiro") {
-
-      this.valorPartida = 600;
-
-    }
+    this.valorPartida = preco;
 
   }
+
+
+  // Se escolher Rio de Janeiro, acrescenta 10%
+  if (event.target.value == "rio-de-janeiro") {
+
+    /*this.valorPartida = preco * 1.10;*/
+    this.valorPartida = 0;
+
+
+  }
+
+}
 
 
   // Adiciona o produto à cesta

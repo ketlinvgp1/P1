@@ -132,8 +132,13 @@
                 <p class="preco">
                     R$ {{valorPartida}}
                 </p> 
-                <p class="preco-parcelado"> (ou R$ {{valorPartida/6}} em até 6x sem juros)
+                <p class="preco-parcelado"> (ou R$ {{valorPartida / 6 | number:'1.2-2'}} em até 6x sem juros)
                 </p>
+            </div>
+            <div *ngIf="valorPartida == 0"
+                class="local-indisponivel">
+
+                Local de partida ainda não disponível.
 
             </div>
 

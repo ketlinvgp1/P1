@@ -5,6 +5,15 @@
     margin-bottom: 10px;
 }
 
+.card-text{
+   font-size: 15px;
+}
+
+.card-preco{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /* VITRINE */
 
 .vitrine {
@@ -19,6 +28,14 @@
 /* CARD */
 .anuncio {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.anuncio .card-body{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 @media (min-width: 1200px) {
@@ -36,42 +53,26 @@
 
 .botoes-card{
     margin-top: auto;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-
 }
-.botao-comprar {
+
+.botao-detalhe {
     display: block;
     background-color: #52718a;
     border-color: #52718a;
     color: aliceblue;
-    width: 50%;
+    width: 100%;
 
-}
-
-.botao-comprar:hover{
-    background-color: white;
-    border-color: #52718a;
-    color: #52718a;
-}
-
-/* BOTÃO VER MAIS */
-.anuncio .botao-detalhe {
-    background-color: white;
-    color: #52718a;
-    border: 1px solid #52718a;
-    width: 50%;
 }
 
 .anuncio .botao-detalhe:hover {
-    background-color: #52718a;
-    color: white;
+    background-color: white;
+    color: #52718a;
+    border-color: #52718a;
 }
 
 
 /* Faz os botões ficarem na parte inferior do card */
-.anuncio .botao-comprar {
+.anuncio .botao-detalhe {
     margin-top: auto;
 }
 

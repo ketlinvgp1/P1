@@ -50,8 +50,8 @@ lista: Produto[] = [
   {
     codigo: 4,
     nome: "Rio de Janeiro – RJ",
-    descritivo: "Cristo Redentor e praias do Rio de Janeiro",
-    detalhes: "Conheça alguns dos principais cartões-postais do Rio de Janeiro, incluindo o Cristo Redentor e suas famosas praias. Aproveite as belas paisagens e os principais pontos turísticos da cidade.",
+    descritivo: "Cidade histórica de Paraty e praias",
+    detalhes: "Conheça alguns dos principais cartões-postais do Rio de Janeiro, incluindo a cidade histórica de Paraty e suas famosas praias. Aproveite as belas paisagens e os principais pontos turísticos da cidade.",
     quantidade: 10,
     valor: 1499.90,
     promo: 1299.90,
