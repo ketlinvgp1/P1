@@ -30,7 +30,7 @@
             </div>
            <!-- Links -->
             <button routerLink="/login" class="btn-entrar">
-                Login
+                Entrar
             </button>
 
         </div>
@@ -41,6 +41,8 @@
 
             <a routerLink="/">Início</a>
             <a routerLink="/cesta">Cesta</a>
+            <a routerLink="/destaque">Destaques</a>
+            <a routerLink="/sobrenos">Sobre nós</a>
            
 
         </div>
@@ -48,9 +50,11 @@
     </div>
 
 </header>
-<div>
-  <router-outlet />
-</div>
+<main class="conteudo">
+   <router-outlet></router-outlet> 
+</main>
+  
+
 <footer class="rodape text-center py-3">
 
     <h5>Caminhos do Brasil</h5>

@@ -1,0 +1,46 @@
+
+h1 {
+    color: #023b86;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.text-center p {
+    font-size: 20px;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.imagem-destaque {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card h4 {
+    color: #023b86;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.card p {
+    font-size: 18px;
+}
+
+
+.card h5 {
+    color: #12532f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}

@@ -7,6 +7,8 @@ import {Cesta} from './cesta/cesta';
 import {Busca} from './busca/busca';
 import {Cadastro} from './cadastro/cadastro'
 import{Resultadobusca} from './resultadobusca/resultadobusca'
+import { Sobrenos } from './sobrenos/sobrenos'
+import {Destaque} from './destaque/destaque'
 
 export const routes: Routes = [
     {path:'', component: Vitrine},
@@ -17,4 +19,6 @@ export const routes: Routes = [
     {path:'busca', component: Busca},
     {path:'cadastro', component:Cadastro},
     {path:'resultadobusca', component: Resultadobusca},
+    {path:'sobrenos', component: Sobrenos},
+   {     path:'destaque', component: Destaque}
 ]
