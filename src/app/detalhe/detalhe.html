@@ -1,51 +1,164 @@
+<!-- MENSAGEM -->
 <div class="alert alert-info" *ngIf="mensagem.length > 0">
     {{mensagem}}
 </div>
+
 
 <div class="container detalhe">
 
     <div class="row card-detalhe">
 
+        <!-- IMAGEM -->
         <div class="col-md-7 imagem-produto">
-            <img src="{{obj.codigo}}.jpg" class="w-100" alt="{{obj.nome}}">
+
+            <!-- CARROSSEL -->
+            <div 
+                id="carousel{{obj.codigo}}" 
+                class="carousel slide">
+
+                <div class="carousel-inner">
+
+                    <!-- Primeira imagem -->
+                    <div class="carousel-item active">
+                        <img 
+                            src="{{obj.codigo}}.jpg"
+                            class="d-block imagem-detalhe"
+                            alt="{{obj.nome}}">
+                    </div>
+
+
+                    <!-- Segunda imagem -->
+                    <div class="carousel-item">
+                        <img 
+                            src="{{obj.codigo}}-2.jpg"
+                            class="d-block imagem-detalhe"
+                            alt="{{obj.nome}}">
+                    </div>
+
+
+                    <!-- Terceira imagem -->
+                    <div class="carousel-item">
+                        <img 
+                            src="{{obj.codigo}}-3.jpg"
+                            class="d-block imagem-detalhe"
+                            alt="{{obj.nome}}">
+                    </div>
+
+
+                    <!-- Quarta imagem -->
+                    <div class="carousel-item">
+                        <img 
+                            src="{{obj.codigo}}-4.jpg"
+                            class="d-block imagem-detalhe"
+                            alt="{{obj.nome}}">
+                    </div>
+
+                </div>
+
+
+                <!-- Botão anterior -->
+                <button 
+                    class="carousel-control-prev"
+                    type="button"
+                    [attr.data-bs-target]="'#carousel' + obj.codigo"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+
+                </button>
+
+
+                <!-- Botão próximo -->
+                <button 
+                    class="carousel-control-next"
+                    type="button"
+                    [attr.data-bs-target]="'#carousel' + obj.codigo"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+
+                </button>
+
+            </div>
+
         </div>
+
+
+        <!-- INFORMAÇÕES -->
 
         <div class="col-md-5 informacoes">
 
-            <h2>{{obj.nome}}</h2>
+            <h2>
+                {{obj.nome}}
+            </h2>
 
             <p class="descricao">
                 {{obj.detalhes}}
             </p>
 
-            <div *ngIf="obj.promo > 0">
-                <p class="preco-antigo">
-                    de: <s>R$ {{obj.valor}}</s>
-                </p>
+            <!-- LOCAL DE PARTIDA -->
+            <div class="partida">
 
-                <p class="preco">
-                    R$ {{obj.promo}}
-                </p>
+                <label for="localPartida">
+                    Local de partida:
+                </label>
+
+                <select
+                    id="localPartida"
+                    class="form-select"
+                    (change)="alterarPartida($event)">
+
+                    <!-- Opção inicial -->
+                    <option value="">
+                        Selecione o local de partida
+                    </option>
+
+                    <option value="sao-paulo">
+                        São Paulo
+                    </option>
+
+                    <option value="rio-de-janeiro">
+                        Rio de Janeiro
+                    </option>
+
+                </select>
+
             </div>
 
-            <div *ngIf="obj.promo <= 0">
+
+            <!-- PREÇO -->
+
+            <div *ngIf="valorPartida > 0">
                 <p class="preco">
-                    R$ {{obj.valor}}
+                    R$ {{valorPartida}}
+                </p> 
+                <p class="preco-parcelado"> (ou R$ {{valorPartida/6}} em até 6x sem juros)
                 </p>
+
             </div>
 
-            <h6 class="sem-estoque" *ngIf="obj.quantidade == 0">
+            <!-- ESTOQUE -->
+            <h6 
+                class="sem-estoque" 
+                *ngIf="obj.quantidade == 0">
+
                 Sem estoque
+
             </h6>
 
-           
-                        <button
+
+            <!-- BOTÃO COMPRAR -->
+
+            <button
                 type="button"
-                class="btn btn-success"
+                class="btn btn-comprar"
                 *ngIf="obj.quantidade > 0"
                 (click)="adicionarCesta(obj)">
+
                 Comprar
-            </button> 
+
+            </button>
+
         </div>
 
     </div>
