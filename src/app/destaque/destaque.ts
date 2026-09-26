@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Produto } from '../model/produto';
 
 @Component({
+  selector: 'app-destaque',
   imports: [CommonModule],
-  selector: 'app-maisvendido',
-  styleUrl: './destaque.css',
   templateUrl: './destaque.html',
+  styleUrl: './destaque.css',
 })
-export class Destaque {
+export class Destaque{
 
-  maisVendidos: Produto[] = [
+  lista: Produto[] = [
 
     {
       codigo: 1,
@@ -38,7 +38,7 @@ export class Destaque {
       codigo: 7,
       nome: "Bonito – MS",
       descritivo: "Flutuação em rios de águas cristalinas",
-      detalhes: "Conheça as águas cristalinas de Bonito e aproveite atividades em meio à natureza.",
+      detalhes: "Conheça as águas cristalinas de Bonito e aproveite atividades de flutuação em meio à natureza.",
       quantidade: 10,
       valor: 1699.90,
       promo: 1499.90,
