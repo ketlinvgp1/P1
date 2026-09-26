@@ -9,25 +9,69 @@
 
 .vitrine {
     row-gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
+
 
 /* CARD */
 .anuncio {
     height: 100%;
 }
 
-/* IMAGENS */
+@media (min-width: 1200px) {
+  .cinco-colunas {
+    width: 20%;
+  }
+}/*maximo 5 colunas em telas grandes*/
 
+/* IMAGENS */
 .imagem-anuncio {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
 
+.botoes-card{
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 
-
-
+}
 .botao-comprar {
     display: block;
-    width: 100%;
+    background-color: #52718a;
+    border-color: #52718a;
+    color: aliceblue;
+    width: 50%;
+
 }
+
+.botao-comprar:hover{
+    background-color: white;
+    border-color: #52718a;
+    color: #52718a;
+}
+
+/* BOTÃO VER MAIS */
+.anuncio .botao-detalhe {
+    background-color: white;
+    color: #52718a;
+    border: 1px solid #52718a;
+    width: 50%;
+}
+
+.anuncio .botao-detalhe:hover {
+    background-color: #52718a;
+    color: white;
+}
+
+
+/* Faz os botões ficarem na parte inferior do card */
+.anuncio .botao-comprar {
+    margin-top: auto;
+}
+
