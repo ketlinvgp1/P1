@@ -6,6 +6,7 @@ import {Detalhe} from './detalhe/detalhe';
 import {Cesta} from './cesta/cesta';
 import {Busca} from './busca/busca';
 import {Cadastro} from './cadastro/cadastro'
+import{Resultadobusca} from './resultadobusca/resultadobusca'
 
 export const routes: Routes = [
     {path:'', component: Vitrine},
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path:'detalhe', component: Detalhe},
     {path:'cesta', component: Cesta},
     {path:'busca', component: Busca},
-    {path:'cadastro', component:Cadastro}
-];
+    {path:'cadastro', component:Cadastro},
+    {path:'resultadobusca', component: Resultadobusca},
+]

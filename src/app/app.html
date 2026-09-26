@@ -23,29 +23,15 @@
                     class="form-control"
                     placeholder="Buscar destinos...">
 
-                <button class="btn-busca">
+                <button routerLink="/resultadobusca" class="btn-busca">
                     Buscar
                 </button>
 
             </div>
-
-
-            <!-- Links -->
-            <nav class="menu-usuario">
-
-                <a routerLink="/cadastro">
-                    Cadastro
-                </a>
-
-                <a routerLink="/cesta">
-                    Cesta
-                </a>
-
-                <a routerLink="/login">
-                    Entrar
-                </a>
-
-            </nav>
+           <!-- Links -->
+            <button routerLink="/login" class="btn-entrar">
+                Login
+            </button>
 
         </div>
 
@@ -54,12 +40,8 @@
         <div class="menu-inferior">
 
             <a routerLink="/">Início</a>
-
-            <a href="#">Destinos</a>
-
-            <a href="#">Promoções</a>
-
-            <a href="#">Sobre nós</a>
+            <a routerLink="/cesta">Cesta</a>
+           
 
         </div>
 

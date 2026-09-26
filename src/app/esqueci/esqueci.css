@@ -1,119 +1,74 @@
-.senha-container {
-    min-height: 85vh;
-    padding: 20px;
+.pagina-senha {
+    min-height: 70vh;
 
-    background: linear-gradient(
-        135deg,
-        #023b86,
-        #2a7e7a
-    );
-}
-
-
-/* Card */
-
-.senha-card {
-    width: 100%;
-    max-width: 430px;
-
-    background-color: white;
-
-    border-top: 6px solid #369cdd !important;
-}
-
-
-/* Título */
-
-.senha-card h2 {
-    color: #023b86;
-
-    font-weight: 700;
-}
-
-
-/* Subtítulo */
-
-.subtitulo {
-    color: #2a7e7a;
-}
-
-
-/* Nome dos campos */
-
-.form-label {
-    color: #023b86;
-
-    font-weight: 600;
-}
-
-
-/* Campos */
-
-.form-control {
-    min-height: 48px;
-
-    border: 1px solid #369cdd;
-
-    border-radius: 8px;
-}
-
-
-/* Campo selecionado */
-
-.form-control:focus {
-    border-color: #2a7e7a;
-
-    box-shadow: 0 0 0 0.2rem rgba(42, 126, 122, 0.20);
-}
-
-
-/* Botão */
-
-.btn-alterar {
-    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: #023b86;
 
+    padding: 40px 20px;
+}
+
+.card-senha {
+    background-color: white;
+
+    width: 100%;
+    max-width: 450px;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card-senha h2 {
+    color: #023b86;
+    margin-bottom: 25px;
+}
+
+.card-senha p {
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.campo-email {
+    display: flex;
+}
+
+.campo-email input {
+    flex: 1;
+
+    padding: 12px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+
+    outline: none;
+}
+
+.campo-email input:focus {
+    border-color: #369cdd;
+}
+
+.campo-email button {
+    background-color: #12532f;
     color: white;
 
     border: none;
-    border-radius: 8px;
 
-    font-weight: 600;
+    padding: 0 20px;
 
-    transition: 0.3s;
+    border-radius: 0 6px 6px 0;
+
+    cursor: pointer;
 }
 
-
-.btn-alterar:hover {
-    background-color: #369cdd;
-
-    color: white;
-}
-
-
-/* Voltar para login */
-
-.voltar-login {
-    color: #12532f;
-
-    font-weight: 600;
-
-    text-decoration: none;
-}
-
-
-.voltar-login:hover {
-    color: #789a37;
-
-    text-decoration: underline;
-}
-
-
-/* Rodapé */
-
-.rodape {
-    background-color: #023b86;
-
-    color: white;
+.campo-email button:hover {
+    background-color: #2a7e7a;
 }

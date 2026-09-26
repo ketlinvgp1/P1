@@ -1,7 +1,6 @@
 .cabecalho {
     background-color: #369cdd;
     padding: 12px 0 0;
-
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 }
 
@@ -11,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 30px;
 }
 
@@ -20,7 +18,6 @@
 .marca {
     display: flex;
     align-items: center;
-
     gap: 10px;
 }
 
@@ -31,10 +28,8 @@
 
 .marca span {
     color: white;
-
     font-size: 20px;
     font-weight: bold;
-
     white-space: nowrap;
 }
 
@@ -42,28 +37,33 @@
 /* Barra de pesquisa */
 .busca {
     display: flex;
-
     width: 100%;
     max-width: 450px;
 }
 
 .busca input {
     border-radius: 8px 0 0 8px;
-
     border: none;
 }
 
 .btn-busca {
     background-color: #023b86;
     color: white;
-
     border: none;
-
     padding: 0 18px;
-
     border-radius: 0 8px 8px 0;
-
     cursor: pointer;
+}
+
+.btn-entrar {
+    background-color: #023b86;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .btn-busca:hover {
@@ -72,12 +72,7 @@
 
 
 /* Cadastro / Cesta / Entrar */
-.menu-usuario {
-    display: flex;
-    align-items: center;
 
-    gap: 18px;
-}
 
 .menu-usuario a {
     color: white;
@@ -96,13 +91,11 @@
 .menu-inferior {
     display: flex;
     justify-content: center;
-
     gap: 40px;
-
     margin-top: 12px;
     padding: 10px 0;
-
     border-top: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 20px;
 }
 
 .menu-inferior a {

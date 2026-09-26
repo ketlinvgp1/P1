@@ -1,1 +1,53 @@
-<p>detalhe works!</p>
+<div class="alert alert-info" *ngIf="mensagem.length > 0">
+    {{mensagem}}
+</div>
+
+<div class="container detalhe">
+
+    <div class="row card-detalhe">
+
+        <div class="col-md-7 imagem-produto">
+            <img src="{{obj.codigo}}.jpg" class="w-100" alt="{{obj.nome}}">
+        </div>
+
+        <div class="col-md-5 informacoes">
+
+            <h2>{{obj.nome}}</h2>
+
+            <p class="descricao">
+                {{obj.detalhes}}
+            </p>
+
+            <div *ngIf="obj.promo > 0">
+                <p class="preco-antigo">
+                    de: <s>R$ {{obj.valor}}</s>
+                </p>
+
+                <p class="preco">
+                    R$ {{obj.promo}}
+                </p>
+            </div>
+
+            <div *ngIf="obj.promo <= 0">
+                <p class="preco">
+                    R$ {{obj.valor}}
+                </p>
+            </div>
+
+            <h6 class="sem-estoque" *ngIf="obj.quantidade == 0">
+                Sem estoque
+            </h6>
+
+           
+                        <button
+                type="button"
+                class="btn btn-success"
+                *ngIf="obj.quantidade > 0"
+                (click)="adicionarCesta(obj)">
+                Comprar
+            </button> 
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,71 @@
+.detalhe {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card-detalhe {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.imagem-produto {
+    padding: 0;
+}
+
+.imagem-produto img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.informacoes {
+    padding: 40px;
+    
+}
+
+.informacoes h2 {
+    color: #023b86;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    font-size: 18px;
+    color: #050505;
+    margin-bottom: 30px;
+    font-size:20px; 
+}
+
+.preco-antigo {
+    color: #777;
+    margin-bottom: 5px;
+     font-size: 30px;
+
+}
+
+.preco {
+    color: #12532f;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.btn-comprar {
+    background-color: #12532f;
+    border: none;
+    padding: 12px 30px;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+.btn-comprar:hover {
+    background-color: #2a7e7a;
+}
+
+.sem-estoque {
+    color: #b00020;
+    font-weight: bold;
+}
+
