@@ -59,13 +59,12 @@ alterarPartida(event: any) {
 
 
   // Se escolher Rio de Janeiro, acrescenta 10%
-  if (event.target.value == "rio-de-janeiro") {
+ /* if (event.target.value == "rio-de-janeiro") {
 
-    /*this.valorPartida = preco * 1.10;*/
+    /*this.valorPartida = preco * 1.10;
+
     this.valorPartida = 0;
-
-
-  }
+  }*/
 
 }
 
