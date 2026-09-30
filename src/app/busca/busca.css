@@ -1,0 +1,20 @@
+.campo-busca {
+    display: flex;
+    gap: 5px;
+}
+
+.campo-busca input {
+    width: 300px;
+}
+
+.btn-busca {
+    background-color: #52718a;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.btn-busca:hover {
+    background-color: #3f5d73;
+}

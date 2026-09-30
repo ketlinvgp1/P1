@@ -1,10 +1,34 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
-  imports: [RouterLink],
-  selector: 'app-busca',
-  styleUrl: './busca.css',
-  templateUrl: './busca.html',
+    imports: [FormsModule],
+    selector: 'app-busca',
+    styleUrl: './busca.css',
+    templateUrl: './busca.html',
 })
-export class Busca {}
+
+export class Busca {
+
+    textoBusca: string = "";
+
+    constructor(private router: Router) {}
+
+    buscar() {
+
+        if (this.textoBusca.trim() != "") {
+
+            // Salva o texto pesquisado
+            localStorage.setItem(
+                "busca",
+                this.textoBusca
+            );
+
+            // Vai para a página de resultados
+            this.router.navigate(['/resultadobusca']);
+        }
+
+    }
+
+}

@@ -1,1 +1,18 @@
-<p>busca works!</p>
+<div class="campo-busca">
+
+    <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar destinos..."
+        [(ngModel)]="textoBusca">
+
+    <button
+        type="button"
+        class="btn-busca"
+        (click)="buscar()">
+
+        Buscar
+
+    </button>
+
+</div>

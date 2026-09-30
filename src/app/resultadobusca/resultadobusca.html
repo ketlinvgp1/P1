@@ -1,1 +1,81 @@
-<p>resultadobusca works!</p>
+<div class="container">
+
+    <h2>Resultado da busca</h2>
+
+    <p>
+        Resultados para:
+        <strong>{{textoBusca}}</strong>
+    </p>
+
+    <!-- Nenhum resultado -->
+    <div
+        class="alert alert-warning"
+        *ngIf="lista.length == 0">
+
+        Nenhum destino encontrado.
+
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="row vitrine">
+
+        <div
+            class="col-12 col-sm-6 col-md-4 col-lg-3 cinco-colunas"
+            *ngFor="let obj of lista">
+
+            <div class="card anuncio">
+
+                <!-- IMAGEM -->
+                <img
+                    src="{{obj.codigo}}.jpg"
+                    class="d-block imagem-anuncio"
+                    alt="{{obj.nome}}">
+
+                <!-- INFORMAÇÕES -->
+                <div class="card-body">
+
+                    <h4 class="card-title">
+                        {{obj.nome}}
+                    </h4>
+
+                    <p class="card-text descricao">
+                        {{obj.descritivo}}
+                    </p>
+
+                    <p class="card-preco">
+                        R$ {{obj.promo}}
+                    </p>
+
+                    <!-- BOTÕES -->
+                    <div class="botoes-card">
+
+                        <button
+                            type="button"
+                            class="btn botao-detalhe"
+                            (click)="verDetalhe(obj)">
+
+                            Detalhes
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn botao-comprar"
+                            *ngIf="obj.quantidade > 0"
+                            (click)="adicionarCesta(obj)">
+
+                            Comprar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
